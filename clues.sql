@@ -38,7 +38,7 @@ LIMIT 1;
 -- Write SQL query here
 SELECT name, countrycode
 FROM cities
-WHERE name LIKE 'Serra%' AND name <> 'Serravalle' AND countrycode IN (SELECT code FROM countries WHERE continent = 'South America');
+WHERE name LIKE 'Ser%' AND name NOT LIKE 'Serravalle' AND countrycode IN (SELECT code FROM countries WHERE continent = 'South America');
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
 -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
